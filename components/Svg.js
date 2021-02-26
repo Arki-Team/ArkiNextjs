@@ -23,9 +23,9 @@ export const SvgCode = () => {
           y2="1.128"
           gradientUnits="objectBoundingBox"
         >
-          <stop offset="0" stopColor="#9e2084" />
-          <stop offset="0.451" stopColor="#e81780" />
-          <stop offset="1" stopColor="#f38118" />
+          <stop offset="0" stopColor="#AD1DEB" />
+          {/* <stop offset="0.451" stopColor="#e81780" /> */}
+          <stop offset="1" stopColor="#6E72FC" />
         </linearGradient>
       </defs>
       <path

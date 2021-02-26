@@ -1,14 +1,14 @@
 import React from "react";
-
-import { Container, UL, LI, Info, Button,IMG } from "./ArkiExtElemnts";
+import Image from 'next/image'
+import { Container, UL, LI, Info, Button, } from "./ArkiExtElemnts";
 import { CheckOutlined } from "@ant-design/icons";
 
 const ArkiExtention = () => {
   return (
     <>
-      <Container>
+      <Container id='extn' >
         {" "}
-        <IMG   src="/images/ArkiExtention.png" ></IMG>
+        <Image height={500} width={700} src="/images/ArkiExtention.png" ></Image>
         <Info>
           <UL>
             {" "}

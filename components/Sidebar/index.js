@@ -9,6 +9,7 @@ import {
   SideBtnWrapper,
   SidebarLink,
 } from "./SidebarElemnts";
+import { Link } from "react-scroll";
 
 const Sidebar = ({ isOpen, toggle }) => {
   return (
@@ -18,21 +19,40 @@ const Sidebar = ({ isOpen, toggle }) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink onClick={toggle} >
-            About
-          </SidebarLink>
-          <SidebarLink onClick={toggle} >
-            Discover
-          </SidebarLink>{" "}
-          <SidebarLink onClick={toggle} >
-            Services
-          </SidebarLink>{" "}
-          <SidebarLink onClick={toggle} >
-            Sign Up
-          </SidebarLink>
+          <Link
+            onClick={toggle}
+            onClick={toggle}
+            to="deals"
+            smooth={true}
+            offset={-70}
+          >
+            {" "}
+            <SidebarLink>Today's Deals</SidebarLink>
+          </Link>
+
+          <Link
+            onClick={toggle}
+            onClick={toggle}
+            to="extn"
+            smooth={true}
+            offset={-150}
+          >
+            <SidebarLink>Arki Extension</SidebarLink>
+          </Link>
+
+          <Link onClick={toggle} onClick={toggle} to="faq" smooth={true}>
+            <SidebarLink> FAQ </SidebarLink>{" "}
+          </Link>
+
+          <Link onClick={toggle} onClick={toggle} to="contact" smooth={true}>
+            <SidebarLink>Contact </SidebarLink>
+          </Link>
         </SidebarMenu>
         <SideBtnWrapper>
           <SidebarRoute to="/signin">Sign In</SidebarRoute>
+        </SideBtnWrapper>
+        <SideBtnWrapper>
+          <SidebarRoute to="/signin">Sign Up</SidebarRoute>
         </SideBtnWrapper>
       </SidebarWrapper>
     </SidebarContainer>

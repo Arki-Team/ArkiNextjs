@@ -34,7 +34,7 @@ const Filter = () => {
   return (
     <>
       <FilterContainer>
-        <Slider min={0} max={10000} defaultValue={[0, 100]} range />
+        <Slider min={0} max={10000} defaultValue={[0, 100]} range  style={{width:'150px'}} />
         <Radiowrapper>
           <h2>Catagory</h2>
           <RadioGroup onChange={onChange1} value={value1}>

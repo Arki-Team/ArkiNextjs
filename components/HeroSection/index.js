@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/Link";
+import { useRouter } from "next/router";
 import {
   Container,
   HeroTextWrapper,
@@ -15,6 +15,7 @@ import {
 const HeroSection = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const companies = new Array(0, 1, 2, 3, 4, 5);
+  const router = useRouter();
   return (
     <>
       <Container>
@@ -28,7 +29,17 @@ const HeroSection = () => {
               onChange={(e) => setSearchTerm(e.target.value)}
             />
 
-            <Link href="/search" passHref><Button>Search</Button></Link>
+            <Button
+              onClick={() =>
+                router.push({
+                  pathname: "/search",
+                  as:'/search',
+                  query: { searchTerm },
+                })
+              }
+            >
+              Search
+            </Button>
           </SearchWrapper>
         </HeroTextWrapper>
         <div>
@@ -37,12 +48,12 @@ const HeroSection = () => {
             src="/images/LandingProducts.png"
             width={500}
             height={500}
-            style={{ width: "100%", maxWidth: "700px", height: "auto" }}
+            style={{ width: "100%", maxWidth: "700px", height: "auto",marginButtom:'300px' }}
           ></Image>
         </div>
       </Container>
 
-      <CompaniesImgeswrapper>
+      {/* <CompaniesImgeswrapper>
         {companies.map((comp, i) => {
           return (
             <img
@@ -53,7 +64,7 @@ const HeroSection = () => {
             ></img>
           );
         })}
-      </CompaniesImgeswrapper>
+      </CompaniesImgeswrapper> */}
     </>
   );
 };

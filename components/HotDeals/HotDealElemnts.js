@@ -25,3 +25,7 @@ export const ScrollWrapper = styled.div`
     display: none;
   }
 `;
+
+export const carouselContainer = styled.div`
+  display:flex !important;
+`;

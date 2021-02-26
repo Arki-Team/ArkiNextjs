@@ -14,7 +14,7 @@ const FAQ = () => {
   return (
     <>
     
-      <FAQWrapper>
+      <FAQWrapper id='faq' >
           <h1>FAQ</h1>
         <Collapse 
         style={{width:'60%',background: '#fff'}}

@@ -4,7 +4,10 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   padding: 10rem 0;
- 
+  height:auto;
+  min-height:100%;
+
+  
   
 
   background-color: #f6f6f8;
@@ -14,18 +17,30 @@ export const Wrapper = styled.div`
   width: 80%;
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+
+  }
+
 `;
 export const ResultsWrapper = styled.div`
-  width: 80%;
+  width: 100%;
 `;
 export const FilterContainer = styled.div`
-  padding: 2rem;
+margin:2rem;
+
+@media screen and (max-width: 768px) {
+    margin: 0;
+  }
 `;
 
 export const DesktopFilter = styled.div`
   width: 20%;
+  height:1000px;
   background: #fff;
   border-radius: 10px;
+  
 
   filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.1));
   margin: 0 2rem 0 0;
@@ -37,6 +52,7 @@ export const DesktopFilter = styled.div`
 export const MobileFilter = styled.div`
   display: none;
   width: 40%;
+
 
   @media screen and (max-width: 768px) {
     display: block;
@@ -90,9 +106,11 @@ export const Card = styled(AntCard)`
   max-height: 300;
   margin: 1rem;
   height: 90%;
-  padding: 1rem;
   text-align: right;
   font-family: "Dubai-Medium";
+  cursor: pointer;
+  border-radius:10px;
+  width:300px;
 `;
 
 export const ImgWrapper = styled.div`
@@ -101,24 +119,29 @@ export const ImgWrapper = styled.div`
   align-items: center;
   width: 100%;
   height: 300px;
-  padding: 1rem;
+ 
 `;
 
 export const Img = styled.img`
   /* width: 50%;
 
   margin:1rem; */
-  width: 70%;
+
   max-width: 200px;
   max-height: 300px;
 `;
 
-export const Title = styled.h3`
+export const Title = styled.div`
   text-align: left;
   font-family: "Dubai-Medium";
-  // width:100%;
-  margin: 2rem 0;
-  width: 500px;
+  height: 5rem;
+  
+  white-space:normal !important;
+ 
+
+
+
+  
 `;
 export const Price = styled.h2`
   align-self: flex-end;

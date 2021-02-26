@@ -1,27 +1,28 @@
 import React from "react";
-import { Img, Title, Card, ImgWrapper, } from "./SearchElemnts";
+import { Img, Title, Card, ImgWrapper, Price} from "./SearchElemnts";
+import Link from 'next/link'
+import Image from 'next/image'
 
-const ProductCard = ({ image, title, price }) => {
+const ProductCard = ({ image, title, price,redirectLink }) => {
   const { Meta } = Card;
   return (
     <>
-      <Card
+    <Link href={redirectLink} >
+      <Card headStyle={{whiteSpace:'normal'}}
         cover={
           <ImgWrapper>
             <Img alt="" src={image}></Img>
           </ImgWrapper>
         }
-      >
-        <Meta title={<Title>{title}</Title>} description={price} />
-      </Card>
 
-      {/* <CardWrapper>
-     <ImgWrapper>
-         <Img src={image}></Img>
-     </ImgWrapper>
-        <Title>{title}</Title>
-        <Price>{price}</Price>
-      </CardWrapper> */}
+      >
+        <Meta title={  <Title>{title}  </Title>} description={ <div style={{display:'flex',justifyContent:'space-between',alignItems:'baseline' }} >
+      <Image width={32} height={32}   src='/images/companies/jarir.svg' ></Image>
+        <Price>{`SAR ${price}`}</Price> </div>} />
+
+      </Card>
+</Link>
+
     </>
   );
 };

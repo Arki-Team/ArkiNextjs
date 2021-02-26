@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+// import Link from 'next/Link'
+import { Link } from "react-scroll";
 import { useRouter } from "next/router";
 import {
   Nav,
@@ -33,7 +35,7 @@ const Navbar = ({ toggle }) => {
     <>
       <Nav
         navbar={navbar}
-        // location={router ? router.pathname.includes("/search") : ""}
+        location={router ? router.pathname.includes("/search") : false}
       >
         <NavbarContainer>
           <NavLogo>
@@ -44,19 +46,28 @@ const Navbar = ({ toggle }) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks>AR</NavLinks>
+              <Link to="deals" smooth={true} offset={-70}>
+                <NavLinks>Today's Deals</NavLinks>
+              </Link>
             </NavItem>
             <NavItem>
-              <NavLinks>Today's Deals</NavLinks>
+              <Link to="extn" smooth={true} offset={-150}>
+                <NavLinks>Arki Extension</NavLinks>
+              </Link>
             </NavItem>
             <NavItem>
-              <NavLinks>Sell</NavLinks>
+              <Link to="faq" smooth={true}>
+                <NavLinks>FAQ</NavLinks>
+              </Link>
             </NavItem>{" "}
             <NavItem>
-              <NavLinks>Registry</NavLinks>
+              <Link to="contact" smooth={true}>
+                <NavLinks>Contact</NavLinks>
+              </Link>
             </NavItem>{" "}
           </NavMenu>
           <NavBtn>
+            <NavLinks style={{ marginRight: "1rem" }}>AR</NavLinks>
             <NavBtnLink>Login</NavBtnLink>
             <NavBtnLink>Sign Up</NavBtnLink>
           </NavBtn>

@@ -11,6 +11,9 @@ if (typeof require !== "undefined") {
 }
 
 module.exports = withCSS({
+  images: {
+    domains: ['jarir.com'],
+  },
   cssModules: true,
   cssLoaderOptions: {
     importLoaders: 1,

@@ -2,16 +2,13 @@ import styled from "styled-components";
 import { Button as AntButton } from "antd";
 
 export const Container = styled.div`
-  /* display:flex;
-flex-direction:column;
-justify-content:space-between;
-align-items:center; */
   display: flex;
   flex-wrap: wrap-reverse;
   justify-content: center;
   align-items: center;
   justify-items: center;
-`;
+  padding: 4rem 0 0 0;
+`
 
 export const Info = styled.div`
   display: flex;
@@ -35,19 +32,36 @@ export const LI = styled.div`
   margin: 2rem 0;
 `;
 
-export const Button = styled(AntButton)`
+export const Button = styled.a`
   border-radius: 10px;
   height: 60px;
   width: 230px;
+  white-space: nowrap;
+  padding: 15px 22px;
+  margin: 0 1rem;
   color: #fff;
-  background: linear-gradient(#d83d94 0%, #a82ec9 48.92%, #4e7edc 100%);
+  font-size: 16px;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background-color: rgb(150, 58, 241);
+
+
+
+
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    /* background: #fff; */
+    color: #fff;
+  }
 
   @media screen and (max-width: 768px) {
     display: none;
   }
 `;
 
-export const IMG = styled.img`
-  width: 100%;
-  max-width: 1050px;
-`;
+

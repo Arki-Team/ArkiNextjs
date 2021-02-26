@@ -5,10 +5,10 @@ export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: baseline;
   justify-items: center;
-  padding: 10rem 20rem;
+  padding: 1rem 20rem;
 
   background: #ffffff;
   background: -webkit-linear-gradient(top, #ffffff, #f7f5fb);

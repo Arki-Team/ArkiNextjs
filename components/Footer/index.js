@@ -28,11 +28,7 @@ const Footer = () => {
           <li>Policy</li>
           <li>Terms &amp; Condition</li>
         </UL>
-        <UL>
-          <h1>Subscribe To Our News Letter.</h1>
-          <Input></Input>
-          <Button>Subscribe</Button>
-        </UL>
+
       </Container>
     </>
   );

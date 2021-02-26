@@ -6,7 +6,11 @@ export const Background = styled.div`
   background-position: center center;
 
   min-height: 1000px;
-
+margin-bottom:-300px;
+@media screen and (max-width: 1030px) {
+margin-bottom:-100px;
+   
+  }
   /* width: 100vw; */
 `;
 
@@ -58,7 +62,7 @@ export const CompaniesImgeswrapper = styled.div`
   }
 `;
 
-export const Button = styled.a`
+export const Button = styled.button`
 display:flex;
 justify-content:center;
 align-items:center;

@@ -1,12 +1,17 @@
 import styled from "styled-components";
-
 export const Nav = styled.nav`
   background: ${(props) =>
-    props.location ? "black" : props.navbar ? "#dc1981" : "tranparent"};
-  transition: ${(props) => (props.navbar ? "all 200ms ease-in" : "")};
+    props.location ? "#6E72FC" : props.navbar ? "rgba(128,93,247,0.9)" : "tranparent"};
+  transition: ${(props) => (props.navbar ? "all 300ms ease-in" : "")}; 
   filter: ${(props) =>
     props.navbar ? "drop-shadow(0 0 20px rgba(0,0,0,0.2))" : ""};
   height: 80px;
+
+
+/* background-color: #AD1DEB;
+background-image: linear-gradient(326deg, #AD1DEB 0%, #6E72FC 74%); */
+
+
   margin-top: -80px;
   display: flex;
   align-items: center;
@@ -15,6 +20,7 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 10;
+  
 
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
@@ -57,7 +63,9 @@ export const MobileIcon = styled.div`
 `;
 
 export const NavMenu = styled.ul`
+
   display: flex;
+
   align-items: center;
   justify-content: space-between;
   list-style: none;
@@ -65,7 +73,7 @@ export const NavMenu = styled.ul`
   text-decoration: none;
   margin-bottom: 0;
 
-  width: 30%;
+  width: 40%;
 
   @media screen and (max-width: 768px) {
     display: none;
@@ -74,6 +82,7 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.li`
   height: 80px;
+  
 `;
 
 export const NavLinks = styled.a`
@@ -81,6 +90,7 @@ export const NavLinks = styled.a`
   font-weight: 600;
   display: flex;
   align-items: center;
+  
   text-decoration: none;
 
   height: 100%;
@@ -90,7 +100,7 @@ export const NavLinks = styled.a`
 } */
   &:hover {
     border-bottom: 3px solid #fff;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.09s ease-in-out;
     color: #fff;
   }
 `;
@@ -122,6 +132,6 @@ export const NavBtnLink = styled.a`
   &:hover {
     transition: all 0.2s ease-in-out;
     background: #fff;
-    color: #dc1981;
+    color: #963af1;
   }
 `;

@@ -1,29 +1,64 @@
 import React from "react";
-import { Dropdown, Button, Menu } from "antd";
+import { Dropdown, Button, Menu, Drawer } from "antd";
 import Filter from "./Filter";
 import { FilterOutlined } from "@ant-design/icons";
 
-const FilterButton = () => {
-  const menu = (
-    <Menu style={{ width: "70%" }}>
-      <Filter></Filter>
-    </Menu>
-  );
+class  FilterButton extends React.Component {
+  state = { visible: false, placement: 'left' };
+  showDrawer = () => {
+    this.setState({
+      visible: true,
+    });
+  };
 
-  return (
-    <div id="1s">
-      <Dropdown
-        overlayStyle={{ zIndex: 1 }}
-        overlay={menu}
-        placement="bottomCenter"
-        arrow
-      >
-        <Button>
-          <FilterOutlined />
+  onClose = () => {
+    this.setState({
+      visible: false,
+    });
+  };
+
+  onChange = (e) => {
+    this.setState({
+      placement: e.target.value,
+    });
+  };
+
+ 
+  render(){
+    const menu = (
+      <Menu style={{ width: "70%" }}>
+        <Filter></Filter>
+      </Menu>
+    );
+    const { placement, visible } = this.state;
+    return (
+      <div id="1s">
+        <Drawer 
+          placement={placement}
+          closable={false}
+          onClose={this.onClose}
+          visible={visible}
+          bodyStyle={{width:'300px'}}
+        
+          key={placement} >{menu}</Drawer>
+        <Button
+          onClick={this.showDrawer}
+          size="large"
+          style={{
+            borderRadius: "10px",
+            background: "#6f72fc",
+            border: "none",
+            width: "3rem",
+            fontWeight: "600",
+          }}
+        >
+          <FilterOutlined style={{ color: "white" }} />
         </Button>
-      </Dropdown>
-    </div>
-  );
+      </div>
+    );
+  }
+
+
 };
 
 export default FilterButton;
