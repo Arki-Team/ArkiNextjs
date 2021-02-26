@@ -24,7 +24,8 @@ export default function Home(props) {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App </title>
+        <title>Arki
+        </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
