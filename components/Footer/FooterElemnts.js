@@ -25,11 +25,11 @@ export const Contact = styled.div`
   display: flex;
   flex-direction: column;
   align-self: center;
-  margin: 0 0 1rem 0;
+ 
 
   @media screen and (max-width: 1030px) {
     align-self: flex-start;
-    margin: 0 0 2rem 2rem;
+  
   }
 `;
 
@@ -41,7 +41,7 @@ export const Social = styled.div`
 
 export const UL = styled.ul`
   list-style: none;
-  margin: 2rem 2rem;
+padding:0;
 `;
 
 export const Button = styled(AntButton)`
