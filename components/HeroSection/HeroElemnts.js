@@ -6,10 +6,9 @@ export const Background = styled.div`
   background-position: center center;
 
   min-height: 1000px;
-margin-bottom:-300px;
-@media screen and (max-width: 1030px) {
-margin-bottom:-100px;
-   
+  margin-bottom: -300px;
+  @media screen and (max-width: 1030px) {
+    margin-bottom: -100px;
   }
   /* width: 100vw; */
 `;
@@ -63,9 +62,9 @@ export const CompaniesImgeswrapper = styled.div`
 `;
 
 export const Button = styled.button`
-display:flex;
-justify-content:center;
-align-items:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
   background-color: rgb(255, 255, 255, 0.15);
   color: #fff;
@@ -79,10 +78,11 @@ align-items:center;
   font-weight: 600;
   letter-spacing: 0.5px;
   color: #fff;
+
   &:hover {
     transition: all 0.2s ease-in-out;
     background: #fff;
-    color: #dc1981;
+    color: #963af1;
   }
 `;
 

@@ -12,7 +12,7 @@ const Deals = ({ products, website }) => {
         title={result.title}
         price={result.cost}
         redirectLink={result.redirectLink}
-        website
+        website={website}
       />
     );
   });
@@ -20,7 +20,7 @@ const Deals = ({ products, website }) => {
 
   return (
     <div id='deals' >
-      <Carousel autoplay>
+      <Carousel dots={false} autoplay>
         <div>
           <div style={{ display: "flex", justifyContent:'center',flexWrap:'wrap' }}>{resultsRendered.slice(0, 4)}</div>
         </div>{" "}

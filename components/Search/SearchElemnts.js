@@ -59,7 +59,12 @@ export const MobileFilter = styled.div`
   }
 `;
 
-export const RadioGroup = styled(AntRadio.Group)``;
+export const RadioGroup = styled(AntRadio.Group)`
+  @media screen and (max-width: 768px) {
+    margin-top: 1rem;
+  }
+
+`;
 
 export const Radiowrapper = styled.div`
   margin: 2rem 0;

@@ -36,7 +36,7 @@ const ArkiExtention = () => {
               <CheckOutlined /> &emsp;
               <li>Nec Pellentesque Efficitur Habitant Turpis.</li>
             </LI>
-            <Button>Add to chrome - It's Free</Button>
+            <Button>Coming Soon!</Button>
           </UL>
         </Info>
       </Container>

@@ -62,7 +62,7 @@ const Results = () => {
 
   return (
     <div  >
-      <div style={{ display: "flex", alignItems:'baseline', justifyContent:'center', width:'100%', marginBottom:'3rem' }}>
+      <div style={{ display: "flex", alignItems:'center', justifyContent:'center', width:'100%', marginBottom:'3rem' }}>
         <Input
           onChange={(e) => setSearchTerm(e.target.value)}
           style={{ width: "40%", minWidth:'10rem',  borderRadius:'10px',padding:'0.5rem'  }}

@@ -38,7 +38,7 @@ class  FilterButton extends React.Component {
           closable={false}
           onClose={this.onClose}
           visible={visible}
-          bodyStyle={{width:'300px'}}
+          bodyStyle={{width:'370px'}}
         
           key={placement} >{menu}</Drawer>
         <Button

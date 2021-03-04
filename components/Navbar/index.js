@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 // import Link from 'next/Link'
-import { Link } from "react-scroll";
+import { Link as Links } from "react-scroll";
 import { useRouter } from "next/router";
+import Link from "next/link";
 import {
   Nav,
   NavbarContainer,
@@ -46,30 +47,39 @@ const Navbar = ({ toggle }) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <Link to="deals" smooth={true} offset={-70}>
-                <NavLinks>Today's Deals</NavLinks>
+              <Link scroll={false} href="/">
+                <Links to="deals" smooth={true} offset={-70}>
+                  {" "}
+                  <NavLinks>Today's Deals</NavLinks>{" "}
+                </Links>
               </Link>
             </NavItem>
             <NavItem>
-              <Link to="extn" smooth={true} offset={-150}>
-                <NavLinks>Arki Extension</NavLinks>
+              <Link scroll={false} href="/">
+                <Links to="extn" smooth={true} offset={-150}>
+                  <NavLinks>Arki Extension</NavLinks>
+                </Links>
               </Link>
             </NavItem>
             <NavItem>
-              <Link to="faq" smooth={true}>
-                <NavLinks>FAQ</NavLinks>
+              <Link scroll={false} href="/">
+                <Links to="faq" smooth={true}>
+                  <NavLinks>FAQ</NavLinks>
+                </Links>
               </Link>
             </NavItem>{" "}
             <NavItem>
-              <Link to="contact" smooth={true}>
-                <NavLinks>Contact</NavLinks>
+              <Link scroll={false} href="/">
+                <Links to="/#contact" smooth={true}>
+                  <NavLinks>Contact</NavLinks>
+                </Links>
               </Link>
             </NavItem>{" "}
           </NavMenu>
           <NavBtn>
-            <NavLinks style={{ marginRight: "1rem" }}>AR</NavLinks>
+            {/* <NavLinks style={{ marginRight: "1rem" }}>AR</NavLinks>
             <NavBtnLink>Login</NavBtnLink>
-            <NavBtnLink>Sign Up</NavBtnLink>
+            <NavBtnLink>Sign Up</NavBtnLink> */}
           </NavBtn>
         </NavbarContainer>
       </Nav>

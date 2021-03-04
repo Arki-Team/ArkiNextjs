@@ -47,7 +47,7 @@ export const Button = styled.a`
   text-decoration: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  background-color: rgb(150, 58, 241);
+  background-color: rgba(150, 58, 241,0.9);
 
 
 

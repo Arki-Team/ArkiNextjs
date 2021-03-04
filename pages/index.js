@@ -14,35 +14,33 @@ import FAQ from "../components/FAQ";
 import ArkiExtention from "../components/ArkiExtention";
 import Footer from "../components/Footer";
 
-export default function Home(props) {
-
+export default function Home({ jarir, extra }) {
   const BackgroundImageStyle = {
     backgroundImage: `url('data:image/svg+xml;utf8, ${encodeURIComponent(
       renderToStaticMarkup(<SvgCode />)
     )}')`,
   };
+ console.log(jarir)
   return (
     <div className="container">
       <Head>
-        <title>Arki
-        </title>
+        <title>Arki</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <Background style={BackgroundImageStyle} >
+        <Background style={BackgroundImageStyle}>
           <HeroSection></HeroSection>{" "}
-
         </Background>
-        <Deals products={props.Products} webite={props.website} />
-        <Deals products={props.Products} webite={props.website} />
+        <Deals products={jarir.Products} website={jarir.website} />
+        <Deals products={extra.Products} website={extra.website} />
         {/* <HotDeals></HotDeals>
         <HowItWorks></HowItWorks> */}
         <ArkiExtention></ArkiExtention>
-        <FAQ  ></FAQ>
+        <FAQ></FAQ>
       </main>
 
-      <footer id="contact" >
+      <footer id="contact">
         <Footer></Footer>
       </footer>
     </div>
@@ -50,11 +48,23 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps() {
-  const props = await axios
-    .post("https://arkitech-api.herokuapp.com/getJarir", { searchTerm: "smartphone" })
+  const extra = await axios
+    .post("https://arkitech-api.herokuapp.com/getExtra", {
+      searchTerm: "smartphone",
+    })
     .then((res) => res.data)
     .catch((err) => err);
+  const jarir = await axios
+    .post("https://arkitech-api.herokuapp.com/getJarir", {
+      searchTerm: "smartphone",
+    })
+    .then((res) => res.data)
+    .catch((err) => err);
+
   return {
-    props, // will be passed to the page component as props
+    props: {
+      extra,
+      jarir,
+    },
   };
 }

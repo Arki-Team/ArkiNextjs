@@ -9,7 +9,8 @@ import {
   SideBtnWrapper,
   SidebarLink,
 } from "./SidebarElemnts";
-import { Link } from "react-scroll";
+import { Link as Links } from "react-scroll";
+import Link from "next/link";
 
 const Sidebar = ({ isOpen, toggle }) => {
   return (
@@ -19,41 +20,47 @@ const Sidebar = ({ isOpen, toggle }) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <Link
-            onClick={toggle}
-            onClick={toggle}
-            to="deals"
-            smooth={true}
-            offset={-70}
-          >
-            {" "}
-            <SidebarLink>Today's Deals</SidebarLink>
+          <Link scroll={false} href="/">
+            <Links
+              onClick={toggle}
+              onClick={toggle}
+              to="deals"
+              smooth={true}
+              offset={-70}
+            >
+              {" "}
+              <SidebarLink>Today's Deals</SidebarLink>
+            </Links>
+          </Link>
+          <Link scroll={false} href="/">
+            <Links
+              onClick={toggle}
+              onClick={toggle}
+              to="extn"
+              smooth={true}
+              offset={-150}
+            >
+              <SidebarLink>Arki Extension</SidebarLink>
+            </Links>
+          </Link>
+          <Link scroll={false} href="/">
+            <Links onClick={toggle} onClick={toggle} to="faq" smooth={true}>
+              <SidebarLink> FAQ </SidebarLink>{" "}
+            </Links>
           </Link>
 
-          <Link
-            onClick={toggle}
-            onClick={toggle}
-            to="extn"
-            smooth={true}
-            offset={-150}
-          >
-            <SidebarLink>Arki Extension</SidebarLink>
-          </Link>
-
-          <Link onClick={toggle} onClick={toggle} to="faq" smooth={true}>
-            <SidebarLink> FAQ </SidebarLink>{" "}
-          </Link>
-
-          <Link onClick={toggle} onClick={toggle} to="contact" smooth={true}>
-            <SidebarLink>Contact </SidebarLink>
+          <Link scroll={false} href="/">
+            <Links onClick={toggle} onClick={toggle} to="contact" smooth={true}>
+              <SidebarLink>Contact </SidebarLink>
+            </Links>
           </Link>
         </SidebarMenu>
-        <SideBtnWrapper>
+        {/* <SideBtnWrapper>
           <SidebarRoute to="/signin">Sign In</SidebarRoute>
         </SideBtnWrapper>
         <SideBtnWrapper>
           <SidebarRoute to="/signin">Sign Up</SidebarRoute>
-        </SideBtnWrapper>
+        </SideBtnWrapper> */}
       </SidebarWrapper>
     </SidebarContainer>
   );

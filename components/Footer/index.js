@@ -14,12 +14,12 @@ const Footer = () => {
           </Social>
         </Contact>
 
-        <UL>
+        {/* <UL>
           <h1>Quick Links</h1>
 
           <li>Aliquet Finibus</li>
           <li>Pretium Diam.</li>
-        </UL>
+        </UL> */}
 
         <UL>
           <h1>Company</h1>
